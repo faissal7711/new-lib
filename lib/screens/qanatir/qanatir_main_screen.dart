@@ -3,6 +3,7 @@ import '../../conestants.dart';
 import '../../dummy_data.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/main_drawer.dart';
+import '../vedio_screen.dart';
 import 'lesson_qanatir_screen.dart';
 import 'qanatir_vedio_screen.dart';
 
@@ -13,7 +14,7 @@ class QanatirMainScreen extends StatelessWidget {
     return Scaffold(
       drawer: MainDrawer(),
       appBar: AppBar(
-        title: Text(DUMMY_CATEGORIES[3].title),
+        title: Text(DUMMY_CATEGORIES[3].title,style: StyleTitle),
       ),
       body: Padding(
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
@@ -22,6 +23,7 @@ class QanatirMainScreen extends StatelessWidget {
               horizontal: MediaQuery.of(context).size.width * 0.02),
           children: [
             CustomButton(
+              heroTag: 'qanatir1',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {
@@ -34,10 +36,12 @@ class QanatirMainScreen extends StatelessWidget {
               height: 15.0,
             ),
             CustomButton(
+              heroTag: 'qanatir2',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {
-                Navigator.of(context).pushNamed(QanatirVideoScreen.routeName);
+                VideoScreen.url ='https://youtu.be/Bd9e_NEGgQg';
+                Navigator.of(context).pushNamed(VideoScreen.routeName);
               },
               text: 'فيديو توضيحي',
 //            description: '',
@@ -46,6 +50,7 @@ class QanatirMainScreen extends StatelessWidget {
               height: 15.0,
             ),
             CustomButton(
+              heroTag: 'qanatir3',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {

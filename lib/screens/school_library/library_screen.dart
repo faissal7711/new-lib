@@ -43,8 +43,8 @@ class LessonLibraryScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 child: CarouselSlider(
                   items: [
-                    buildContainerImage(context, 'assets/images/belady0.jpg'),
-                    buildContainerImage(context, 'assets/images/belady1.jpg'),
+                    buildContainerImage(context, 'assets/images/library_image.jpeg'),
+                    buildContainerImage(context, 'assets/images/library_imag2.jpeg'),
                   ],
                   //Slider Container properties
                   options: CarouselOptions(

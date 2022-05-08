@@ -44,21 +44,22 @@ class MyApp extends StatelessWidget {
 //        '/': (context) => TabsScreen(),
         CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (context) => MealDetailScreen(),
+        VideoScreen.routeName: (context) => VideoScreen(),
 
         NewYearMainScreen.routeName: (context) => NewYearMainScreen(),
-        NewYearVideoScreen.routeName: (context) => NewYearVideoScreen(),
+//        NewYearVideoScreen.routeName: (context) => NewYearVideoScreen(),
         LessonNewYearScreen.routeName: (context) => LessonNewYearScreen(),
 
-        LibraryVideoScreen.routeName: (context) => LibraryVideoScreen(),
+//        LibraryVideoScreen.routeName: (context) => LibraryVideoScreen(),
         LibraryMainScreen.routeName: (context) => LibraryMainScreen(),
         LessonLibraryScreen.routeName: (context) => LessonLibraryScreen(),
 
         LessonQanatirScreen.routeName: (context) => LessonQanatirScreen(),
         QanatirMainScreen.routeName: (context) => QanatirMainScreen(),
-        QanatirVideoScreen.routeName: (context) => QanatirVideoScreen(),
+//        QanatirVideoScreen.routeName: (context) => QanatirVideoScreen(),
 
         BeladyMainScreen.routeName: (context) => BeladyMainScreen(),
-        BeladyVideoScreen.routeName: (context) => BeladyVideoScreen(),
+//        BeladyVideoScreen.routeName: (context) => BeladyVideoScreen(),
         LessonBeladyScreen.routeName: (context) => LessonBeladyScreen(),
       },
       title: 'Flutter Demo',

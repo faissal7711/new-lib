@@ -16,7 +16,7 @@ class LibraryMainScreen extends StatelessWidget {
 //      backgroundColor: KMainColor,
       drawer: MainDrawer(),
       appBar: AppBar(
-        title: Text(DUMMY_CATEGORIES[0].title),
+        title: Text(DUMMY_CATEGORIES[2].title,style: StyleTitle,),
       ),
       body: Padding(
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
@@ -25,6 +25,7 @@ class LibraryMainScreen extends StatelessWidget {
               horizontal: MediaQuery.of(context).size.width * 0.02),
           children: [
             CustomButton(
+              heroTag: 'library1',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {
@@ -37,10 +38,12 @@ class LibraryMainScreen extends StatelessWidget {
               height: 15.0,
             ),
             CustomButton(
+              heroTag: 'library2',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {
-                Navigator.of(context).pushNamed(LibraryVideoScreen.routeName);
+                VideoScreen.url ='https://youtu.be/AAv8tbtf0dU';
+                Navigator.of(context).pushNamed(VideoScreen.routeName);
               },
               text: 'فيديو توضيحي',
 //            description: '',
@@ -49,6 +52,7 @@ class LibraryMainScreen extends StatelessWidget {
               height: 15.0,
             ),
             CustomButton(
+              heroTag: 'library3',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {

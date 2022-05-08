@@ -17,7 +17,7 @@ class NewYearMainScreen extends StatelessWidget {
 //      backgroundColor: KMainColor,
       drawer: MainDrawer(),
       appBar: AppBar(
-        title: Text(DUMMY_CATEGORIES[0].title),
+        title: Text(DUMMY_CATEGORIES[0].title,style: StyleTitle),
       ),
       body: Padding(
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
@@ -26,6 +26,7 @@ class NewYearMainScreen extends StatelessWidget {
               horizontal: MediaQuery.of(context).size.width * 0.02),
           children: [
             CustomButton(
+              heroTag: 'new_year1',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {
@@ -38,10 +39,12 @@ class NewYearMainScreen extends StatelessWidget {
               height: 15.0,
             ),
             CustomButton(
+              heroTag: 'new_year2',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {
-                Navigator.of(context).pushNamed(NewYearVideoScreen.routeName);
+                VideoScreen.url ='https://youtu.be/uSeCmFyRn4Y';
+                Navigator.of(context).pushNamed(VideoScreen.routeName);
               },
               text: 'فيديو توضيحي',
 //            description: '',
@@ -50,6 +53,7 @@ class NewYearMainScreen extends StatelessWidget {
               height: 15.0,
             ),
             CustomButton(
+              heroTag: 'new_year3',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {

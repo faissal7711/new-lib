@@ -18,6 +18,7 @@ class CategoriesScreen extends StatelessWidget {
       child: ListView(
         children: [
           CustomButton(
+            heroTag: 'main1',
             color: KButtonColor1,
 //            context: context,
             onPressed: () {
@@ -27,6 +28,7 @@ class CategoriesScreen extends StatelessWidget {
 //            description: '',
           ),
           CustomButton(
+            heroTag: 'main2',
             color: KButtonColor2,
 //            context: context,
             onPressed: () {
@@ -36,6 +38,7 @@ class CategoriesScreen extends StatelessWidget {
 //            description: '',
           ),
           CustomButton(
+            heroTag: 'main3',
             color: KButtonColor3,
 //            context: context,
             onPressed: () {
@@ -45,6 +48,7 @@ class CategoriesScreen extends StatelessWidget {
 //            description: '',
           ),
           CustomButton(
+            heroTag: 'main4',
             color: KButtonColor4,
 //            context: context,
             onPressed: () {

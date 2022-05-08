@@ -1,10 +1,14 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, unused_field
 
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../conestants.dart';
+
 class VideoScreen extends StatefulWidget {
   static const routeName = '/video_screen';
+  static String url;
+//  static Function convertedUrl(String url){}
 
   const VideoScreen({Key key}) : super(key: key);
 
@@ -26,7 +30,7 @@ class _VideoScreenState extends State<VideoScreen> {
   void initState() {
 //    _controller = YoutubePlayerController(initialVideoId: 'UIkPFdrKM8g');
     _controller = YoutubePlayerController(
-      initialVideoId: convertedUrl('https://youtu.be/uSeCmFyRn4Y'),
+      initialVideoId: convertedUrl(VideoScreen.url),
       flags: const YoutubePlayerFlags(
         mute: false,
         autoPlay: true,
@@ -64,7 +68,7 @@ class _VideoScreenState extends State<VideoScreen> {
     return Scaffold(
 //      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('الفيديو التوضيحي'),
+        title: Text('الفيديو التوضيحي',style: StyleTitle),
         centerTitle: true,
       ),
       body: Center(
@@ -82,7 +86,7 @@ class _VideoScreenState extends State<VideoScreen> {
   }
 
   // function
-  String convertedUrl(url) {
+  static String convertedUrl(url) {
     return YoutubePlayer.convertUrlToId(url).toString();
   }
 }

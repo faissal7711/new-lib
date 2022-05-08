@@ -37,10 +37,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(
           _page[_selectPageIndex]['title'],
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 33,
-          ),
+          style: StyleTitle,
         ),
 //        leading: Icon(Icons.menu,),
       ),

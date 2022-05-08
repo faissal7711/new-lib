@@ -15,14 +15,13 @@ class BeladyMainScreen extends StatelessWidget {
     return Scaffold(
       drawer: MainDrawer(),
       appBar: AppBar(
-        title: Text(DUMMY_CATEGORIES[0].title),
+        title: Text(DUMMY_CATEGORIES[1].title,style: StyleTitle,),
       ),
       body: Padding(
-        padding:
-            EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
+        padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
         child: ListView(
           padding: EdgeInsets.symmetric(
-              horizontal: MediaQuery.of(context).size.height * 0.15),
+              horizontal: MediaQuery.of(context).size.width * 0.02),
           children: [
 //            CustomContainer(
 //              function: () {
@@ -34,6 +33,7 @@ class BeladyMainScreen extends StatelessWidget {
 //              title: 'شرح الدرس',
 //            ),
             CustomButton(
+              heroTag: 'belady1',
               color: KButtonColor1,
 //            context: context,
               onPressed: () {
@@ -42,16 +42,23 @@ class BeladyMainScreen extends StatelessWidget {
               text: 'شرح الدرس',
 //            description: '',
             ),
-//            CustomButton(
-//              onPressed: () {
+            CustomButton(
+              heroTag: 'belady2',
+              color: KButtonColor2,
+              onPressed: () {
+                VideoScreen.url ='https://youtu.be/Ao3gZkIS0Mc';
+                Navigator.of(context).pushNamed(VideoScreen.routeName);
+              },
+              text: 'فيديو توضيحي',
+            ),
+            CustomButton(
+              heroTag: 'belady3',
+              color: KButtonColor3,
+              onPressed: () {
 //                Navigator.of(context).pushNamed(VideoScreen.routeName);
-//              },
-//              text: 'فيديو توضيحي',
-//            ),
-//            CustomButton(
-//              onPressed: () {},
-//              text: 'اﻹختبارات',
-//            ),
+              },
+              text: 'اﻹختبارات',
+            ),
           ],
 //          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
 //            maxCrossAxisExtent: 200.0,

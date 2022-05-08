@@ -43,7 +43,7 @@ class MainDrawer extends StatelessWidget {
               width: double.infinity,
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.all(20.0),
-              color: Theme.of(context).backgroundColor,
+              color: Theme.of(context).backgroundColor.withOpacity(.6),
               child: Center(
                 child: Text(
                   'طفلي يتعلم',

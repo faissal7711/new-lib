@@ -9,11 +9,13 @@ class CustomButton extends StatelessWidget {
     Key key,
     @required this.onPressed,
     @required this.text,
+    @required this.heroTag,
     @required this.color,
      this.width=140,
   }) : super(key: key);
   final Function() onPressed;
   final String text;
+  final String heroTag;
   final double width;
   final Color color;
 
@@ -28,6 +30,7 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0),
         ),
         child: FloatingActionButton.extended(
+          heroTag: heroTag,
           backgroundColor: color,
 //        icon: Icon(Icons.arrow_forward_ios,color: Colors.white,),
           onPressed: onPressed,
